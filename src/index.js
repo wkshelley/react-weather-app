@@ -9,6 +9,7 @@ ReactDOM.render(
     <div>
       <h1>Weather App</h1>
       <App />
+
       <footer>Open Sourced by Shelley White</footer>
     </div>
   </React.StrictMode>,
