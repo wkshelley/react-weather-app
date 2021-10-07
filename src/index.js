@@ -8,9 +8,9 @@ ReactDOM.render(
   <React.StrictMode>
     <div>
       <h1>Weather App</h1>
+      <App />
       <footer>Open Sourced by Shelley White</footer>
     </div>
-    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
