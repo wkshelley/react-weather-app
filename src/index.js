@@ -8,6 +8,16 @@ ReactDOM.render(
   <React.StrictMode>
     <div className="weather">
       <App />
+      <footer>
+        Coded by Shelley White-Lyons 👩‍💻 Open Sourced on{" "}
+        <a href="https://github.com/wkshelley/react-weather-app" target="blank">
+          Git Hub
+        </a>
+        Hosted on
+        <a href="https://confident-shannon-abc70d.netlify.app/" target="blank">
+          Netlify
+        </a>
+      </footer>
     </div>
   </React.StrictMode>,
   document.getElementById("root")
