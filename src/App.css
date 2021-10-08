@@ -14,7 +14,7 @@ li:first-letter {
 .current:first-letter {
   text-transform: capitalize;
 }
-.Weather {
+.weather {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   border: rgb(239, 247, 247) 1px solid;
   border-radius: 5%;

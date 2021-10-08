@@ -31,38 +31,35 @@ export default function App() {
   }
 
   let form = (
-    <div className="row">
-      <div className="col-9">
-        <form onSubmit={handleSubmit}>
-          <input
-            className="form-control"
-            type="search"
-            onChange={searchCity}
-            placeholder="Enter City..."
-          />
-          <input type="submit" value="search" />
-        </form>
-      </div>
+    <div className="col-9">
+      <form onSubmit={handleSubmit}>
+        <input
+          className="form-control"
+          type="search"
+          onChange={searchCity}
+          placeholder="Enter City..."
+        />
+        <input type="submit" value="search" />
+        <button className="rounded">📍</button>
+      </form>
     </div>
   );
 
   if (display) {
     return (
       <div className="container">
-        <div className="Weather">
-          {form}
-          <ul>
-            <h2> {city} </h2>
-            <li> Temperature: {description.temperature} C˚ </li>
-            <li> Humidity: {description.humidity} % </li>
-            <li> Wind: {description.wind} mph </li>
-            <li> Current: {description.description}</li>
-            <li>
-              {" "}
-              <img src={description.icon} alt="weather conditions" />{" "}
-            </li>
-          </ul>{" "}
-        </div>
+        {form}
+        <ul>
+          <li> {city} </li>
+          <li> Temperature: {description.temperature} C˚ </li>
+          <li> Humidity: {description.humidity} % </li>
+          <li> Wind: {description.wind} mph </li>
+          <li> Current: {description.description}</li>
+          <li>
+            {" "}
+            <img src={description.icon} alt="weather conditions" />{" "}
+          </li>
+        </ul>{" "}
       </div>
     );
   } else {

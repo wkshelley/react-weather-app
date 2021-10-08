@@ -6,11 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>
-      <h1>Weather App</h1>
+    <div className="weather">
       <App />
-
-      <footer>Open Sourced by Shelley White</footer>
     </div>
   </React.StrictMode>,
   document.getElementById("root")
