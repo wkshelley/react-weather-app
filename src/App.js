@@ -31,35 +31,52 @@ export default function App() {
   }
 
   let form = (
-    <div className="col-9">
-      <form onSubmit={handleSubmit}>
-        <input
-          className="form-control"
-          type="search"
-          onChange={searchCity}
-          placeholder="Enter City..."
-        />
-        <input type="submit" value="search" />
-        <button className="rounded">📍</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className="row">
+        <div className="col-9">
+          <input
+            className="form-control"
+            type="search"
+            onChange={searchCity}
+            placeholder="Enter City..."
+          />
+        </div>
+        <div className="col-3">
+          <div className="float-right">
+            <input type="submit" value="search" />
+            <button className=" rounded">📍</button>
+          </div>
+        </div>
+      </div>
+    </form>
   );
 
   if (display) {
     return (
       <div className="container">
-        {form}
-        <ul>
-          <li> {city} </li>
-          <li> Temperature: {description.temperature} C˚ </li>
-          <li> Humidity: {description.humidity} % </li>
-          <li> Wind: {description.wind} mph </li>
-          <li> Current: {description.description}</li>
-          <li>
-            {" "}
-            <img src={description.icon} alt="weather conditions" />{" "}
-          </li>
-        </ul>{" "}
+        <div className="row">
+          {form}
+          <div className="col-6">
+            <div className="d-flex weather-temperature">
+              <img
+                className="float-left"
+                src={description.icon}
+                alt="weather conditions"
+              />{" "}
+            </div>
+          </div>
+          <ul>
+            <div className="col-9">
+              <div className="weather-description">
+                <li> {city} </li>
+                <li> Temperature: {description.temperature} C˚ </li>
+                <li> Humidity: {description.humidity} % </li>
+                <li> Wind: {description.wind} mph </li>
+                <li> Current: {description.description}</li>
+              </div>
+            </div>{" "}
+          </ul>{" "}
+        </div>
       </div>
     );
   } else {
