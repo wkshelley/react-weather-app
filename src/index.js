@@ -9,11 +9,12 @@ ReactDOM.render(
     <div className="weather">
       <App />
       <footer>
-        Coded by Shelley White-Lyons 👩‍💻 Open Sourced on{" "}
+        Coded by Shelley White-Lyons 👩‍💻
+        <br /> Open Sourced on {""}
         <a href="https://github.com/wkshelley/react-weather-app" target="blank">
-          Git Hub
+          Git Hub {""}
         </a>
-        Hosted on
+        Hosted on {""}
         <a href="https://confident-shannon-abc70d.netlify.app/" target="blank">
           Netlify
         </a>
