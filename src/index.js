@@ -4,23 +4,33 @@ import "./index.css";
 
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
+import Weather from "./Weather";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="weather">
-      <App />
-      <footer>
-        Coded by Shelley White-Lyons 👩‍💻
-        <br /> Open Sourced on {""}
-        <a href="https://github.com/wkshelley/react-weather-app" target="blank">
-          Git Hub {""}
-        </a>
-        Hosted on {""}
-        <a href="https://confident-shannon-abc70d.netlify.app/" target="blank">
-          Netlify
-        </a>
-      </footer>
+    <div className="container">
+      <div className="weather">
+        <App />
+        <Weather />
+        <footer>
+          Coded by Shelley White-Lyons 👩‍💻
+          <br /> Open Sourced on {""}
+          <a
+            href="https://github.com/wkshelley/react-weather-app"
+            target="blank"
+          >
+            Git Hub {""}
+          </a>
+          Hosted on {""}
+          <a
+            href="https://confident-shannon-abc70d.netlify.app/"
+            target="blank"
+          >
+            Netlify
+          </a>
+        </footer>
+      </div>
     </div>
   </React.StrictMode>,
   document.getElementById("root")
