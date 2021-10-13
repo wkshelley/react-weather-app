@@ -7,3 +7,9 @@ a {
   text-decoration: none;
   cursor: default;
 }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -15px;
+}

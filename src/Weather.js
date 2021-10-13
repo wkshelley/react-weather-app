@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 
 export default function Weather() {
@@ -22,7 +23,7 @@ export default function Weather() {
         </div>
       </form>
 
-      <h1>Columbus</h1>
+      <h1 mt-5>Columbus</h1>
       <ul>
         <li>Monday</li>
         <li>Partly Sunny</li>
@@ -33,16 +34,15 @@ export default function Weather() {
           <img
             href="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="mostly sunny"
-          ></img>
+          />
         </div>
       </div>
-      <div className="row">
-        <div classname="col-6">
-          <ul>
-            <li>Percipitation: 5%</li>
-            <li>Hunidity: 80%</li>
-            <li>Wind: 5 mph</li>
-          </ul>
+
+      <div className="col-10">
+        <div className="d-flex align-items-end flex-column">
+          <li>Percipitation: 5%</li>
+          <li>Hunidity: 80%</li>
+          <li>Wind: 5 mph</li>
         </div>
       </div>
     </div>

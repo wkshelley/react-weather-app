@@ -1,3 +1,12 @@
-.App {
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.weatherApp {
   border: gray;
 }
