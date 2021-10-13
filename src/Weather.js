@@ -12,6 +12,7 @@ export default function Weather() {
               className="form-control"
               type="search"
               placeholder="Enter City..."
+              autoFocus="on"
             />
           </div>
           <div className="col-3">
@@ -23,7 +24,7 @@ export default function Weather() {
         </div>
       </form>
 
-      <h1 mt-5>Columbus</h1>
+      <h1>Columbus</h1>
       <ul>
         <li>Monday</li>
         <li>Partly Sunny</li>
@@ -32,9 +33,10 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <img
-            href="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            href="https://media.istockphoto.com/vectors/cute-flat-sun-icon-vector-id1124567572?k=20&m=1124567572&s=612x612&w=0&h=qA2-ugQviG9uGvpn5-K90sK9w5QZjd3TetULc_5VECc="
             alt="mostly sunny"
-          />
+          />{" "}
+          80˚
         </div>
       </div>
 
