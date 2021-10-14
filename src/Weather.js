@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.css";
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -14,8 +14,8 @@ export default function Weather(props) {
       date: "Monday",
       humidity: response.data.main.humidity,
       percipitation: response.data.rain,
-      image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
-      //icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      //image: `http://ssl.gstatic.com/onebox/weather/64/sunny.png`,
+      image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
     setReady(true);

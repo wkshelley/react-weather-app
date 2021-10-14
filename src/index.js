@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import "bootstrap/dist/css/bootstrap.css";
-import App from "./App";
+//import App from "./App";
 import Weather from "./Weather";
 import reportWebVitals from "./reportWebVitals";
 
@@ -11,7 +11,6 @@ ReactDOM.render(
   <React.StrictMode>
     <div className="container">
       <div className="weather">
-        <App />
         <Weather defaultCity="Columbus" />
         <footer>
           Coded by Shelley White-Lyons 👩‍💻
