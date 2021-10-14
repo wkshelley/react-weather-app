@@ -13,6 +13,9 @@
   line-height: 26px;
   margin: 20px 0 15px 0;
 }
+.weatherApp h2 {
+  margin-right: 5px;
+}
 .weatherApp li {
   color: rgb(112, 117, 122);
   font-size: 18px;
