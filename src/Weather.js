@@ -42,7 +42,7 @@ export default function Weather(props) {
           </div>
         </form>
 
-        <h1>Columbus</h1>
+        <h1>{props.defaultCity}</h1>
         <ul>
           <li>{weatherData.date}</li>
           <li>{weatherData.description}</li>
