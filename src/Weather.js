@@ -33,10 +33,19 @@ export default function Weather() {
       <div className="row">
         <div className="col-6">
           <img
-            href="https://media.istockphoto.com/vectors/cute-flat-sun-icon-vector-id1124567572?k=20&m=1124567572&s=612x612&w=0&h=qA2-ugQviG9uGvpn5-K90sK9w5QZjd3TetULc_5VECc="
+            href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Sun-and-Moon-PNG/Sun_PNG_Clipart.png?m=1596789530"
             alt="mostly sunny"
           />{" "}
-          80˚
+          <span className="d-flex">
+            <h2 className="units float-left">80˚</h2>
+            <a href="/" className="justify-content-around active">
+              C{" "}
+            </a>
+            ︱
+            <a href="/" className="justify-content-around active">
+              F
+            </a>
+          </span>
         </div>
       </div>
 

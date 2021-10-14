@@ -1,10 +1,6 @@
-button {
-  display: inline-block;
-}
 
-li:first-letter {
-  text-transform: capitalize;
-}
+
+
 
 .weather {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
