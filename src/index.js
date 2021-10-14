@@ -12,7 +12,7 @@ ReactDOM.render(
     <div className="container">
       <div className="weather">
         <App />
-        <Weather />
+        <Weather defaultCity="Columbus" />
         <footer>
           Coded by Shelley White-Lyons 👩‍💻
           <br /> Open Sourced on {""}

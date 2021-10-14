@@ -3,7 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
 
@@ -11,9 +11,11 @@ export default function Weather() {
     setWeatherData({
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
+      date: "Monday",
       humidity: response.data.main.humidity,
       percipitation: response.data.rain,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
+      //icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
     setReady(true);
@@ -42,13 +44,13 @@ export default function Weather() {
 
         <h1>Columbus</h1>
         <ul>
-          <li>Monday</li>
-          <li>Partly Sunny</li>
+          <li>{weatherData.date}</li>
+          <li>{weatherData.description}</li>
         </ul>
 
         <div className="row">
           <div className="col-6">
-            <img href={weatherData.icon} alt={weatherData.description} />{" "}
+            <img href={weatherData.image} alt={weatherData.description} />{" "}
             <span className="d-flex">
               <h2 className="units float-left">{weatherData.temperature}˚</h2>
               <a href="/" className="justify-content-around active">
@@ -72,8 +74,8 @@ export default function Weather() {
     );
   else {
     const apiKey = "969aa20a54046a1f43968e313b89d478";
-    let city = "Columbus";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    //  let city = "Columbus";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
