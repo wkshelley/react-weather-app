@@ -14,8 +14,8 @@ export default function Weather(props) {
       date: "Monday",
       humidity: response.data.main.humidity,
       percipitation: response.data.rain,
-      //image: `http://ssl.gstatic.com/onebox/weather/64/sunny.png`,
-      image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
+      //image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png
       description: response.data.weather[0].description,
     });
     setReady(true);
