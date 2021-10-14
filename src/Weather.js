@@ -13,6 +13,8 @@ export default function Weather() {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       percipitation: response.data.rain,
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
     });
     setReady(true);
   }
@@ -46,10 +48,7 @@ export default function Weather() {
 
         <div className="row">
           <div className="col-6">
-            <img
-              href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Sun-and-Moon-PNG/Sun_PNG_Clipart.png?m=1596789530"
-              alt="mostly sunny"
-            />{" "}
+            <img href={weatherData.icon} alt={weatherData.description} />{" "}
             <span className="d-flex">
               <h2 className="units float-left">{weatherData.temperature}˚</h2>
               <a href="/" className="justify-content-around active">
