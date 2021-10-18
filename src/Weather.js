@@ -14,8 +14,8 @@ export default function Weather(props) {
       date: "Monday",
       humidity: response.data.main.humidity,
       percipitation: response.data.rain,
-      image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
-      //image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png
+      //  image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
+      image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
     setReady(true);
@@ -50,24 +50,33 @@ export default function Weather(props) {
 
         <div className="row">
           <div className="col-6">
-            <img href={weatherData.image} alt={weatherData.description} />{" "}
             <span className="d-flex">
-              <h2 className="units float-left">{weatherData.temperature}˚</h2>
-              <a href="/" className="justify-content-around active">
+              <img src={weatherData.image} alt={weatherData.description} />{" "}
+              <h2 className="temperature units float-left">
+                {weatherData.temperature}˚
+              </h2>
+              <a
+                href="/"
+                className=" temperature justify-content-around active"
+              >
                 C{" "}
               </a>
-              ︱
-              <a href="/" className="justify-content-around active">
+              <div className="temperature">︱</div>
+              <a
+                href="/"
+                className=" temperature justify-content-around active"
+              >
                 F
               </a>
             </span>
           </div>
-        </div>
-        <div className="col-10">
-          <div className="d-flex align-items-end flex-column">
-            <li>Percipitation: {weatherData.percipitation}%</li>
-            <li>Humidity: {weatherData.humidity}%</li>
-            <li>Wind Speed: {weatherData.wind} mph</li>
+
+          <div className="col-6">
+            <div className="d-flex align-items-end flex-column">
+              <li>Percipitation: {weatherData.percipitation}%</li>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind Speed: {weatherData.wind} mph</li>
+            </div>
           </div>
         </div>
       </div>
@@ -77,6 +86,7 @@ export default function Weather(props) {
     //  let city = "Columbus";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
     return "Loading...";
   }
 }

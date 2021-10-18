@@ -34,3 +34,7 @@ li:first-letter {
 .weatherApp button {
   display: inline-block;
 }
+
+.weatherApp .temperature {
+  margin-top: 30px;
+}
