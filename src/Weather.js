@@ -15,7 +15,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
 
       humidity: response.data.main.humidity,
-      percipitation: response.data.rain,
+      feelsLike: Math.round(response.data.main.feels_like),
       //  image: `https://ssl.gstatic.com/onebox/weather/64/sunny.png`,
       image: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
@@ -76,9 +76,12 @@ export default function Weather(props) {
 
           <div className="col-6">
             <div className="d-flex align-items-end flex-column">
-              <li>Percipitation: {weatherData.percipitation}%</li>
+              <li>Feels Like: {weatherData.feelsLike}˚</li>
               <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind Speed: {weatherData.wind} mph</li>
+              <li>
+                Wind: {weatherData.wind} mph{""}
+                {""}
+              </li>
             </div>
           </div>
         </div>
