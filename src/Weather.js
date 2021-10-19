@@ -21,10 +21,19 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
     });
   }
+  //need to have this function to be called once city is submitted
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  //need to have the city search be called once the form is submitted
+  function search() {}
+
   if (weatherData.ready)
     return (
       <div className="weatherApp">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -89,7 +98,7 @@ export default function Weather(props) {
     );
   else {
     const apiKey = "969aa20a54046a1f43968e313b89d478";
-    //  let city = "Columbus";
+
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
     console.log(apiUrl);
