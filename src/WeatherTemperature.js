@@ -40,6 +40,7 @@ export default function WeatherTemperature(props) {
       </div>
     );
   } else {
+    //still working on F to C conversion.   showCelsius is not being called on the return
     return (
       <div>
         {showCelsius}
