@@ -3,6 +3,6 @@
 }
 
 .WeatherForecast-temp-min {
-  opacity: 0.5;
-  color: brown;
+  opacity: 0.7;
+  margin-left: 5px;
 }
