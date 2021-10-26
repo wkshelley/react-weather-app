@@ -3,14 +3,14 @@ import React, { useState } from "react";
 export default function WeatherTemperature(props) {
   const [units, setUnits] = useState("farenheit");
 
-  function showCelsius() {
+  function showCelsius(event) {
+    event.preventDefault();
     return ((props.farenheit - 32) * 5) / 9;
 
-    // event.preventDefault();
     //setUnits("celsius");
   }
-  function showFarenheit(event) {
-    event.preventDefault();
+  function showFarenheit() {
+    //event.preventDefault();
     setUnits("farenheit");
   }
 
@@ -43,7 +43,7 @@ export default function WeatherTemperature(props) {
     //still working on F to C conversion.   showCelsius is not being called on the return
     return (
       <div>
-        {showCelsius}
+        {showCelsius()}
         <a
           href="/"
           className=" temperature justify-content-around "
@@ -54,7 +54,7 @@ export default function WeatherTemperature(props) {
         <a
           href="/"
           className=" temperature justify-content-around "
-          onClick={showFarenheit}
+          //onClick={showFarenheit}
         >
           F{" "}
         </a>
