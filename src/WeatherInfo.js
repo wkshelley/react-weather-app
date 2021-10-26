@@ -15,10 +15,7 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-6">
           <span className="d-flex">
-            <WeatherImage
-              code={props.data.image}
-              alt={props.data.description}
-            />{" "}
+            <WeatherImage code={props.data.image} />{" "}
             <WeatherTemperature farenheit={props.data.temperature} />
           </span>
         </div>
