@@ -14,7 +14,7 @@
   margin: 20px 0 15px 0;
 }
 .weatherApp h2 {
-  margin-right: 5px;
+  margin-left: 7px;
 }
 .weatherApp li {
   color: rgb(112, 117, 122);
@@ -35,8 +35,7 @@ li:first-letter {
   display: inline-block;
 }
 .weatherApp canvas {
-  margin-right: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .weatherApp .temperature {
   margin-top: 30px;
