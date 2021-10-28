@@ -3,15 +3,17 @@ import axios from "axios";
 import "./WeatherForecast.css";
 import WeatherImage from "./WeatherImage";
 
-export default function WeatherForecast() {
+export default function WeatherForecast(props) {
   function handleResponse(response) {
     console.log(response.data);
   }
+
   let apiKey = "969aa20a54046a1f43968e313b89d478";
-  let longitude = 39.9612;
-  let latitude = 82.9988;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+  let longitude = props.coord.lon;
+  let latitude = props.coord.lat;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="WeatherForecast">
       <div className="row">
