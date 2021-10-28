@@ -24,11 +24,7 @@ export default function WeatherTemperature(props) {
               <h2 className="temperature units float-left">
                 {props.farenheit}˚
               </h2>
-              <a
-                href="/"
-                className=" temperature justify-content-around "
-                //  onClick={showFarenheit}
-              >
+              <a href="/" className=" temperature justify-content-around ">
                 F{" "}
               </a>
               <div className="temperature">︱</div>
@@ -45,7 +41,6 @@ export default function WeatherTemperature(props) {
       </div>
     );
   } else {
-    //still working on F to C conversion.   showCelsius is not being called on the return
     return (
       <div className="WeatherTemperature">
         <div className="row">
