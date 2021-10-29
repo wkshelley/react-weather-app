@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherForecast.css";
-import WeatherImage from "./WeatherImage";
+//import WeatherImage from "./WeatherImage";
+import WeatherDailyForecast from "./WeatherDailyForecast";
 
 export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
-  const [forecast, setForecast] = useState();
+  const [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -13,18 +14,12 @@ export default function WeatherForecast(props) {
   }
 
   if (loaded) {
+    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <div className="WeatherForecat-day">Tues</div>
-            <div className="WeatherForecast-icon"></div>
-            <WeatherImage code="01d" size={30} />
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temp-min">48˚</span>
-
-              <span className="WeatherForecast-temp-max"> 61˚</span>
-            </div>
+            <WeatherDailyForecast data={forecast[0]} />
           </div>
         </div>
       </div>
