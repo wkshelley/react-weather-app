@@ -9,11 +9,13 @@ export default function WeatherDailyForecast(props) {
         <WeatherImage code={props.data.weather[0].icon} size={30} />
       </div>
       <div className="WeatherForecast-temperatures">
-        <span className="WeatherForecast-temp-min">{props.data.temp.min}˚</span>
+        <span className="WeatherForecast-temp-min">
+          {Math.round(props.data.temp.min)}˚
+        </span>
 
         <span className="WeatherForecast-temp-max">
           {" "}
-          {props.data.temp.max}˚
+          {Math.round(props.data.temp.max)}˚
         </span>
       </div>
     </div>
