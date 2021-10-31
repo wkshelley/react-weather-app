@@ -5,8 +5,8 @@ import "./WeatherForecast.css";
 import WeatherDailyForecast from "./WeatherDailyForecast";
 
 export default function WeatherForecast(props) {
-  const [loaded, setLoaded] = useState(false);
-  const [forecast, setForecast] = useState(null);
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
@@ -14,7 +14,7 @@ export default function WeatherForecast(props) {
   }
 
   if (loaded) {
-    //console.log(forecast);
+    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">

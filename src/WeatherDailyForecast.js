@@ -6,7 +6,7 @@ export default function WeatherDailyForecast(props) {
     <div>
       <div className="WeatherForecat-day">{day()}</div>
       <div className="WeatherForecast-icon">
-        <WeatherImage code={props.data[0].weather[0].icon} size={30} />
+        <WeatherImage code={props.data[0].icon} size={30} />
       </div>
       <div className="WeatherForecast-temperatures">
         <span className="WeatherForecast-temp-min">
