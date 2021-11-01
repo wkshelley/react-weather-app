@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function WeatherTemperature(props) {
-  const [units, setUnits] = useState("farenheit");
+  /* const [units, setUnits] = useState("farenheit");
 
   function showCelsius(event) {
     event.preventDefault();
@@ -15,32 +15,20 @@ export default function WeatherTemperature(props) {
   function celsius() {
     return ((props.farenheit - 32) * 5) / 9;
   }
-  if (units === "farenheit") {
-    return (
-      <div className="WeatherTemperature">
-        <div className="row">
-          <div className="col-6">
-            <span className="d-flex">
-              <h2 className="temperature units float-left">
-                {props.farenheit}˚
-              </h2>
-              <a href="/" className=" temperature justify-content-around ">
-                F{" "}
-              </a>
-              <div className="temperature">︱</div>
-              <a
-                href="/"
-                className=" temperature justify-content-around "
-                onClick={showCelsius}
-              >
-                C
-              </a>
-            </span>
-          </div>
+  if (units === "farenheit") {*/
+  return (
+    <div className="WeatherTemperature">
+      <div className="row">
+        <div className="col-6">
+          <span className="d-flex">
+            <h2 className="temperature units float-left">{props.farenheit}˚</h2>
+            <div className=" temperature justify-content-around "> F </div>
+          </span>
         </div>
       </div>
-    );
-  } else {
+    </div>
+  );
+  /* } else {
     return (
       <div className="WeatherTemperature">
         <div className="row">
@@ -71,5 +59,5 @@ export default function WeatherTemperature(props) {
         </div>
       </div>
     );
-  }
+  }*/
 }

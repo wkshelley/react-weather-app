@@ -21,7 +21,7 @@ export default function WeatherInfo(props) {
         </div>
 
         <div className="col-6">
-          <div className="d-flex align-items-end flex-column">
+          <div className="d-flex flex-column">
             <li>Feels Like: {props.data.feelsLike}˚</li>
             <li>Humidity: {props.data.humidity}%</li>
             <li>

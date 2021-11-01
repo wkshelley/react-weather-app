@@ -35,7 +35,7 @@ li:first-letter {
   display: inline-block;
 }
 .weatherApp canvas {
-  margin-top: 8px;
+  margin-top: 15px;
 }
 .weatherApp .temperature {
   margin-top: 30px;
