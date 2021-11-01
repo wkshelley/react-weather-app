@@ -21,9 +21,9 @@ export default function WeatherInfo(props) {
           </span>
         </div>
 
-        <div className="description col-6">
-          <div className="d-flex flex-column">
-            <li>Feels Like: {props.data.feelsLike}˚</li>
+        <div className="col-6">
+          <div className="d-flex justify-content-end flex-column">
+            <li className="description">Feels Like: {props.data.feelsLike}˚</li>
             <li>Humidity: {props.data.humidity}%</li>
             <li>
               Wind: {props.data.wind} mph{""}
