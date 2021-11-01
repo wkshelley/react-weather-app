@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherImage from "./WeatherImage";
 import "./WeatherInfo.css";
+
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
@@ -22,7 +23,7 @@ export default function WeatherInfo(props) {
         </div>
 
         <div className="col-6">
-          <div className="d-flex justify-content-end flex-column">
+          <div className="d-flex flex-column">
             <li className="description">Feels Like: {props.data.feelsLike}˚</li>
             <li>Humidity: {props.data.humidity}%</li>
             <li>
