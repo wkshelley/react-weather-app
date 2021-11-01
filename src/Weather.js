@@ -60,8 +60,11 @@ export default function Weather(props) {
             </div>
             <div className="col-3">
               <div className="float-right">
-                <input type="submit" value="search" />
-                <button className=" rounded">📍</button>
+                <input
+                  type="submit"
+                  value="search"
+                  className="btn btn-primary w-80"
+                />
               </div>
             </div>
           </div>
